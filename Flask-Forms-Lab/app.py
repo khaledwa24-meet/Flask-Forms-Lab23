@@ -19,12 +19,10 @@ def login():
 		return render_template('login.html')
 	else: 
 		if (request.form["username"] == username and request.form["password"] == password):
-			return render_template('home.html')
+			return render_template('home.html', facebook_friends = facebook_friends)
 	return redirect(url_for('home'))
 
-@app.route('/home')
-def home():
-	return render_template('home.html')
+
 
 if __name__ == "__main__":  # Makes sure this is the main process
 	app.run( # Starts the site
