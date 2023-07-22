@@ -14,7 +14,12 @@
 </head>
 <body>
 
-
+<h1>does friend exists: </h1>
+{% if name in facebook_friends %} 
+  <h2> yes this friend exists!!<h2>
+{% else %}
+  <h2> no this friend doesn't exist :( </h2>
+{% endif %}
 
 </body>
 </html>
